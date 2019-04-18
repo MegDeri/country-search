@@ -1,0 +1,51 @@
+$basic-color: #fff;
+$background-color: #0bcfa5;
+$paragraph: #868080;
+$shadow:  #686767;
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Montserrat', sans-serif;
+	background-color: $background-color;
+}
+body {
+	text-align: center;
+}
+img {
+	height: 20vh;
+}
+h1 {
+	margin: 30px 0;
+	text-transform: uppercase;
+    color: $paragraph;
+    text-shadow: 2px 2px $shadow;
+}
+button, input {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 10px;
+	border: 2px solid #222;
+}
+button {
+	background-color: #ccc;
+	cursor: pointer;
+}
+button:hover {
+	background-color: #ddd;
+}
+input {
+	background-color: #fff;
+}
+h2 {
+	margin: 20px 0 10px;
+}
+li {
+	padding: 5px;
+}

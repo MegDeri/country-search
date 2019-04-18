@@ -18,7 +18,13 @@ function showCountriesList(resp) {
   countriesList.innerHTML = '';
   resp.forEach(function(item) {
     var liEl = document.createElement('li');
-    liEl.innerText = item.name + " 's capital is: " + item.capital;
+    var liSec = document.createElement('li');
+    var liThr = document.createElement('li');
+    liEl.innerText = item.name + "'s capital is: "  + item.capital;
+    liSec.innerText = "Currency in " + item.name + " is: "  + item.currencies;
+    liThr.innerText = "Language(s) in " + item.name + " is: "  + item.languages;
     countriesList.appendChild(liEl);
+    countriesList.appendChild(liSec);
+    countriesList.appendChild(liThr);
   });
 }

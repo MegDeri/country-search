@@ -1,51 +1,71 @@
 $basic-color: #fff;
+$second: #ccc;
 $background-color: #0bcfa5;
 $paragraph: #868080;
 $shadow:  #686767;
+$button: #0c9476;
 
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html {
-	font-family: 'Montserrat', sans-serif;
-	background-color: $background-color;
-}
 body {
-	text-align: center;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: $background-color;
 }
+.pic {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
 img {
-	height: 20vh;
+  height: 200px;
+  width:  400px;
+  object-fit: cover;
+  box-shadow: 2px 2px 1px $second;
 }
+
 h1 {
-	margin: 30px 0;
-	text-transform: uppercase;
-    color: $paragraph;
-    text-shadow: 2px 2px $shadow;
+  margin: 30px 0;
+  text-transform: uppercase;
+  color: $paragraph;
+  text-shadow: 2px 2px $shadow;
 }
-button, input {
-	display: inline-block;
-	padding: 10px 20px;
-	font-size: 16px;
-	border-radius: 10px;
-	border: 2px solid #222;
-}
-button {
-	background-color: #ccc;
-	cursor: pointer;
-}
-button:hover {
-	background-color: #ddd;
-}
-input {
-	background-color: #fff;
-}
+
 h2 {
-	margin: 20px 0 10px;
+  margin: 20px 0 10px;
 }
+
+.into {
+  width: 220px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  @include border-radius(10px);
+  border: 1px solid $second;
+}
+
+button {
+  background-color: $button;
+  color: $second;
+  cursor: pointer;
+  &:hover {
+    background-color: #0bcfa5;
+    border: 2px solid $basic-color;
+    color: $basic-color;
+  }
+}
+
 li {
-	padding: 5px;
+  padding: 5px;
 }
